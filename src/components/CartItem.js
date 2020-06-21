@@ -19,7 +19,7 @@ function CartItem({
         <p className='item-name'>{name}</p>
         <p className='color-gray'>#{id}</p>
       </div>
-      <div className='item-card-col item-card-quantity-col'>
+      <div className='item-card-quantity-col'>
         <button onClick={() => decreaseQuan(id)} className='btn'>
           -
         </button>
