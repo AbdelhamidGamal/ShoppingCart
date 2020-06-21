@@ -62,19 +62,31 @@ function cart(state = initialState, action) {
         ),
       };
     case DECREMENT_AMOUNT:
-      const arrAfterDec = state.items.map((item) => {
-        if (item.id === action.id) {
-          item.quantity--;
-        }
-        return item;
-      });
-      return {
-        items: arrAfterDec,
-        total: arrAfterDec.reduce(
-          (acu, cur) => acu + cur.price * cur.quantity,
-          0
-        ),
-      };
+      const itemToDec = state.items.find((item) => item.id === action.id);
+      if (itemToDec.quantity <= 1) {
+        const arrAfterRem = state.items.filter((item) => item.id !== action.id);
+        return {
+          items: arrAfterRem,
+          total: arrAfterRem.reduce(
+            (acu, cur) => acu + cur.price * cur.quantity,
+            0
+          ),
+        };
+      } else {
+        const arrAfterDec = state.items.map((item) => {
+          if (item.id === action.id) {
+            item.quantity--;
+          }
+          return item;
+        });
+        return {
+          items: arrAfterDec,
+          total: arrAfterDec.reduce(
+            (acu, cur) => acu + cur.price * cur.quantity,
+            0
+          ),
+        };
+      }
     default:
       return state;
   }
