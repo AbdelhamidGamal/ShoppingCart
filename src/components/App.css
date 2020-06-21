@@ -20,7 +20,7 @@ body {
 }
 
 .color-gray {
-  color: gray;
+  color: rgb(151, 151, 151);
 }
 
 /* container */
@@ -35,7 +35,7 @@ body {
 .shopping-card {
   margin: 3rem 2rem;
   padding: 5rem 4rem;
-  min-width: 900px;
+  width: 800px;
   border-radius: 1rem;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
 }
@@ -50,7 +50,7 @@ body {
 
 .item-card {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 2fr 0.5fr 0.5fr;
   grid-column-gap: 1rem;
   margin: 1rem auto;
 }
@@ -83,6 +83,7 @@ body {
   margin: 0rem 1rem;
   font-weight: bolder;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .item-quantity-current {
@@ -97,4 +98,13 @@ body {
 
 .total-price {
   font-size: 1.5rem;
+}
+
+.go-back-link {
+  color: blue;
+  text-decoration: none;
+}
+
+.go-back-link:visited {
+  color: blue;
 }

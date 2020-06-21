@@ -13,9 +13,12 @@ function ShoppingCart({ items, total }) {
         })}
       </div>
       <div className='shopping-card-footer '>
-        <a href='#'>Continue Shopping</a>
+        <a className='go-back-link' href='/'>
+          Continue Shopping
+        </a>
         <p>
-          Subtotal <b className='total-price'>${total}</b>
+          <b className='color-gray'>Subtotal</b>{' '}
+          <b className='total-price'>${total.toFixed(2)}</b>
         </p>
       </div>
     </div>

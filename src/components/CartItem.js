@@ -29,11 +29,13 @@ function CartItem({
         </button>
       </div>
       <p className='item-card-col'>
-        <b>${price} </b>
+        <b>${price.toFixed(2)} </b>
       </p>
-      <p onClick={() => remove(id)} className='item-card-col color-gray'>
-        X
-      </p>
+      <div className='item-card-col'>
+        <button onClick={() => remove(id)} className='btn color-gray'>
+          X
+        </button>
+      </div>
     </div>
   );
 }
