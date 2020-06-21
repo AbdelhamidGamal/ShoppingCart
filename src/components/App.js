@@ -1,17 +1,10 @@
 import React from 'react';
 import ShoppingCart from './ShoppingCart';
+import './App.css';
 
 function App() {
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '50vh',
-      }}
-    >
+    <div className='app'>
       <ShoppingCart />
     </div>
   );

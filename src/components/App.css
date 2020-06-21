@@ -1,0 +1,100 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.text-left {
+  text-align: center;
+}
+
+.color-gray {
+  color: gray;
+}
+
+/* container */
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* shopping card */
+.shopping-card {
+  margin: 3rem 2rem;
+  padding: 5rem 4rem;
+  min-width: 900px;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+}
+
+.shopping-card-title {
+  font-weight: 500;
+}
+
+.shopping-card-items {
+  margin: 3rem auto;
+}
+
+.item-card {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  grid-column-gap: 1rem;
+  margin: 1rem auto;
+}
+
+.item-card-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-name {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.item-thumb {
+  width: 5rem;
+}
+
+.item-card-quantity-col {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  background-color: white;
+  color: black;
+  margin: 0rem 1rem;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.item-quantity-current {
+  border: 1px solid rgb(151, 151, 151);
+  padding: 0.1rem 1rem;
+}
+
+.shopping-card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-price {
+  font-size: 1.5rem;
+}
